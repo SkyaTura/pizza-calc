@@ -25,6 +25,7 @@ v-container
   v-data-table.mt-8(
     disable-pagination
     hide-default-footer
+    mobile-breakpoint="200"
     :headers="headers"
     :items="calculatedHistory"
   )
@@ -66,7 +67,8 @@ export default {
   },
   methods: {
     calculate(price, size) {
-      return !size ? 0 : price / size
+      if (!size) return 0
+      return (price / (Math.PI * Math.pow(size / 2, 2))).toFixed(4)
     },
     clear() {
       this.price = 0

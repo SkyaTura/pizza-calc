@@ -8,7 +8,7 @@ export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: '%s - pizza-calc',
-    title: 'pizza-calc',
+    title: 'Pizza Price Calculator',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -56,6 +56,15 @@ export default {
           success: colors.green.accent3,
         },
       },
+    },
+  },
+
+  pwa: {
+    manifest: {
+      name: 'Pizza Price Calculator',
+      short_name: 'Pizza Price Calculator',
+      lang: 'en-us',
+      useWebmanifestExtension: false,
     },
   },
 

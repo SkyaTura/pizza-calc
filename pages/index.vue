@@ -16,12 +16,12 @@ v-container
       :value="price"
       @input="price = parseFloat($event)"
     )
-    v-text-field(label="Price per cm²" readonly outlined :value="calculate(price, size)")
+    v-text-field(label="Price per square area" readonly outlined :value="calculate(price, size)")
     v-row.mx-0
       v-btn(text @click="clearHistory" color="red") Clear history
       v-spacer
       v-btn(text @click="clear") Clear
-      v-btn(@click="save") Save
+      v-btn(@click="save" color="blue" text) Save
   v-data-table.mt-8(
     disable-pagination
     hide-default-footer
@@ -36,8 +36,8 @@ export default {
   data: () => ({
     token: 0,
     name: '',
-    price: 0,
-    size: 0,
+    price: '',
+    size: '',
     headers: [
       { text: 'Name', value: 'name' },
       { text: 'Price', value: 'price' },
@@ -71,8 +71,8 @@ export default {
       return (price / (Math.PI * Math.pow(size / 2, 2))).toFixed(4)
     },
     clear() {
-      this.price = 0
-      this.size = 0
+      this.price = ''
+      this.size = ''
       this.name = ''
     },
     clearHistory() {

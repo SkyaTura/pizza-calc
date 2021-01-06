@@ -1,12 +1,10 @@
-[
-  {
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "br.com.skyatura.pizzacalc",
-      "sha256_cert_fingerprints": [
-        "6B:1D:E6:27:9A:AB:30:8A:3D:C8:A7:68:07:06:A3:F7:C0:34:71:11:81:B5:B2:9F:59:A0:47:04:C5:54:37:83"
-      ]
-    }
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "br.com.skyatura.pizzacalc",
+    "sha256_cert_fingerprints": [
+      "6E:EC:69:44:28:41:04:1B:11:2D:44:01:22:B5:C9:09:5C:8B:CE:75:E7:0A:3D:4D:42:FE:A5:D4:D8:F1:96:2E"
+    ]
   }
-]
+}]

@@ -63,6 +63,8 @@ export default {
       description: 'Calculate your pizza price per size',
       theme_color: '#fbc02d',
       nativeUI: true,
+      viewport:
+        'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1',
     },
     manifest: {
       name: 'Pizza Price Calculator',

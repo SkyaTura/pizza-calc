@@ -9,11 +9,6 @@ export default {
   head: {
     titleTemplate: '%s - pizza-calc',
     title: 'Pizza Price Calculator',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-    ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
@@ -64,11 +59,20 @@ export default {
   },
 
   pwa: {
+    meta: {
+      description: 'Calculate your pizza price per size',
+      theme_color: '#fbc02d',
+      nativeUI: true,
+    },
     manifest: {
       name: 'Pizza Price Calculator',
       short_name: 'Pizza Price Calculator',
       lang: 'en-us',
+      background_color: '#fafafa',
       useWebmanifestExtension: false,
+    },
+    workbox: {
+      offlineAnalytics: true,
     },
   },
 

@@ -18,10 +18,10 @@ v-container
     )
     v-text-field(label="Price per square area" readonly outlined :value="calculate(price, size)")
     v-row.mx-0
-      v-btn(text @click="clearHistory" color="red") Clear history
+      v-btn(text @click="clearHistory" color="red darken-2") Clear history
       v-spacer
       v-btn(text @click="clear") Clear
-      v-btn(@click="save" color="blue" text) Save
+      v-btn(@click="save" color="blue darken-2" text) Save
   v-data-table.mt-8(
     disable-pagination
     hide-default-footer
@@ -29,6 +29,8 @@ v-container
     :headers="headers"
     :items="calculatedHistory"
   )
+    template(#no-data)
+      .black--text No pizza saved yet.
 </template>
 
 <script>
